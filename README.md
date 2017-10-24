@@ -1,4 +1,4 @@
-# UDE
+# UDE (Unique Desktop Environment)
 UDE is a Java desktop environment that has both a file manager and desktop.
 <br/>
 <h2>Goals:</h2>
@@ -6,7 +6,9 @@ UDE is a Java desktop environment that has both a file manager and desktop.
 1. Make an easily customizable desktop environment.<br/>
 2. Allow for fancy effects.<br/>
 3. Mimic some of the old effects such as cube selection, grid wall selection, etc. <br/>
-4. Push the boundaries of what we consider a desktop. Try aiming for a 3D environment or just do something unique.
+4. Push the boundaries of what we consider a desktop. Try aiming for a 3D environment or just do something unique.<br/>
+5. Work to maintain portability to run on Windows or Mac.
+
 <br/>
 <h2>Current Phase:</h2>
 <hr/>
