@@ -1,0 +1,9 @@
+./TabSystem/Icon.java
+./TabSystem/TabView.java
+./UFM.java
+./ThumbnailSystem/ThumbnailGenerator.java
+./ThumbnailSystem/CleanPath.java
+./ThumbnailSystem/Thumbnail.java
+./Utils/UFMLogger.java
+./Utils/Settings.java
+./Controller.java

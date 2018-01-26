@@ -1,3 +1,8 @@
+package com.itdominator.ufm;
+
+import com.itdominator.ufm.Utils.Settings;
+import com.itdominator.ufm.TabSystem.TabView;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TabPane;
@@ -6,12 +11,12 @@ import javafx.scene.layout.HBox;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.SplitPane;
-import javafx.scene.Node;
 
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.KeyCode;
+import javafx.scene.Node;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -27,6 +32,8 @@ public class Controller {
     @FXML private AnchorPane masterBase, base1, base2, base3, base4, splitPaneBottomAnchor;
     @FXML private SplitPane masterSplitPane, splitPaneTop, splitPaneBottom;
     @FXML private TabPane tabPane1, tabPane2, tabPane3, tabPane4;
+
+    // Generics
     private static Node pane2Node, pane3Node, pane4Node, masterTopNode, masterBottomNode;
     private static boolean stateOfCol2 = true, stateOfCol3 = true,
                       stateOfCol4 = true, botomRowInserted = true;
@@ -61,8 +68,9 @@ public class Controller {
         pane3Node = splitPaneBottom.getItems().get(0);         // In slot "1" of splitPaneBottom
         pane4Node = splitPaneBottom.getItems().get(1);         //  In slot "2" of splitPaneBottom
 
+        setTimeTasks();      // Garbage collection
         setClickEvents();
-        setTimeTasks();
+        loadDefaultPanes();
     }
 
     // Add new tab to location
@@ -74,7 +82,6 @@ public class Controller {
 
     // Make new tabs
     void generateTab() {
-    // dasy chane tab to icon and back to edit?
         tab = new Tab(homeDir);
         tabView = new TabView();
         tabView.setDirLoc(homeDir);
@@ -101,7 +108,7 @@ public class Controller {
         // tabs will open folder locations in selected tab if drag in is folder
     }
 
-
+    // Sets upo the hide buttons top right.
     private void setClickEvents() {
         tgglPane2Bttn.setOnAction(col2 -> {
             if (stateOfCol2 == true) {
@@ -152,6 +159,7 @@ public class Controller {
         });
     }
 
+    // Do periodic garbage collection.
     private void setTimeTasks() {
         garbageTimer.schedule(new TimerTask() { public void run()  {
             System.gc();
@@ -159,6 +167,20 @@ public class Controller {
         // Need to properly close this.... upon system close
     }
 
+    // On start of file manager.
+    // Need to eventually check settings to load sessions...
+    private void loadDefaultPanes() {
+        selectedTabView = 1;
+        generateTab();
+        selectedTabView = 2;
+        generateTab();
+        selectedTabView = 3;
+        generateTab();
+        selectedTabView = 4;
+        generateTab();
+    }
+
+    // Determin if bottom two panes are shown or not
     private void horizontalBarState() {
         if (bottomCount == 0) {
             masterSplitPane.getItems().remove(masterBottomNode);
