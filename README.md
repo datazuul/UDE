@@ -19,9 +19,12 @@ I might just use UFM's code to do the desktop than a separate Jar.
 3. Focus on modularity.
 <br/>
 <h2>Images</h2>
-![Logic Flow](Images/ude-current-plan.png)
-
 ![1 Pane View](Images/1pane.png)
+<br/><br/>
 ![2 Pane View](Images/2pane.png)
+<br/><br/>
 ![3 Pane View](Images/3pane.png)
+<br/><br/>
 ![4 Pane View](Images/4pane.png)
+<br/><br/>
+![Logic Flow](Images/logic.png)
