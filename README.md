@@ -20,9 +20,9 @@ I might just use UFM's code to do the desktop than a separate Jar.
 <br/>
 <h2>Images</h2>
 <hr/>
-![Logic Flow](Images/logic.png)
 
 ![1 Pane View](Images/1pane.png)
 ![2 Pane View](Images/2pane.png)
 ![3 Pane View](Images/3pane.png)
 ![4 Pane View](Images/4pane.png)
+![5 Logic Flow](Images/logic.png)
